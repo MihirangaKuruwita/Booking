@@ -1,0 +1,64 @@
+<resources>
+    <string name="app_name">Booking</string>
+    <string name="cover_button">Sign In</string>
+    <string name="cover_button2">Sign Up</string>
+    <string name="signin">Sign In</string>
+    <string name="sign_email">Email</string>
+    <string name="signin_pw">Password</string>
+    <string name="signin_button">Sign in and Continue</string>
+    <string name="signup">Sign Up</string>
+    <string name="up_name">Name</string>
+    <string name="up_email">Email</string>
+    <string name="up_address">Address</string>
+    <string name="up_pw">Password</string>
+    <string name="up_button">Create Account</string>
+
+    <string name="useracount1">User Account</string>
+    <string name="u_name">Kuruwita</string>
+    <string name="u_email">kuruwita@gmail.com</string>
+    <string name="u_address">No83,udumulla</string>
+    <string name="u_pw">password</string>
+    <string name="u_button">Delete My Account</string>
+    <string name="u_mybooks">My Books</string>
+    <string name="mybooks">My Books</string>
+    <string name="m_bookname">Book Name</string>
+    <string name="m_author">Author</string>
+    <string name="m_booksellingprice">Book Selling Price</string>
+    <string name="button3">Publish</string>
+    <string name="name_nocahange">Name</string>
+    <string name="email_nocahnge">Email</string>
+    <string name="address_nochange">Address</string>
+    <string name="passowr_nochange">Password</string>
+    <string name="u_button4">My Orders</string>
+
+    <string name="book1">Harry Potter
+                         Rs 500.00</string>
+    <string name="book2">Technology
+                         Rs 750.00</string>
+    <string name="price">Price details</string>
+    <string name="item">Item(2)</string>
+    <string name="amount">Amount Payable</string>
+    <string name="button4">CONTINUE</string>
+    <string name="price3">500.00</string>
+    <string name="search_bar">Search</string>
+    <string name="addbooks">Add Books</string>
+    <string name="order">Orders</string>
+    <string name="todo1">TODO</string>
+    <string name="todo">TODO</string>
+
+    <string name="edit_message">Enter a message</string>
+    <string name="button_send">send</string>
+    <string name="input1">Card Number</string>
+    <string name="expiry">Expiry Date</string>
+    <string name="CVV">CVV</string>
+    <string name="Paynow">Pay Now</string>
+    <string name="cancel">Cancel</string>
+    <string name="payment">Payment</string>
+    <string name="total">Total Amount</string>
+    <string name="credit">Credit Card</string>
+    <string name="debit">Debit Card</string>
+    <string name="cash">Cash on Delivery</string>
+    <string name="cardnumber">Card Number</string>
+    <string name="exp">Expire Date</string>
+    <string name="cvv">CVV</string>
+</resources>
