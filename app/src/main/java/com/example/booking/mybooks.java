@@ -15,25 +15,30 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class mybooks extends AppCompatActivity {
 
-    FirebaseDatabase rootNode;
-    DatabaseReference reference;
+
     private FirebaseAuth firebaseAuth;
     private EditText bname1,author1,selling1;
     private Button publish;
+
+    private  FirebaseDatabase firebaseDatabase;
+
+    FirebaseDatabase rootNode;
+    DatabaseReference reference;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mybooks);
 
-        firebaseAuth =FirebaseAuth.getInstance();
-
-        publish.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
+        bname1 = findViewById(R.id.bname);
+        author1 = findViewById(R.id.author);
+        selling1 = findViewById(R.id.selling);
+        publish = findViewById(R.id.publish);
 
                 //data upload
-
+        firebaseAuth = FirebaseAuth.getInstance();
+        firebaseDatabase = FirebaseDatabase.getInstance();
 
                 //save data in realtime database
                 rootNode = FirebaseDatabase.getInstance();
@@ -60,17 +65,18 @@ public class mybooks extends AppCompatActivity {
                 });
 
             }
-        });
-
-    }
 
 
-    private void setupViews(){
+
+
+
+ /*   private void setupViews(){
         bname1=(EditText)findViewById(R.id.bname);
         author1=(EditText)findViewById(R.id.author);
         selling1= (EditText)findViewById(R.id.selling);
+        }
+*/
 
-    }
 
 
     }

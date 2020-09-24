@@ -26,6 +26,9 @@ public class updateprofile extends AppCompatActivity {
     private Button save;
     private FirebaseAuth firebaseAuth;
     private  FirebaseDatabase firebaseDatabase;
+
+
+    FirebaseDatabase rootNode;
     DatabaseReference reference;
 
     @Override
@@ -42,7 +45,8 @@ public class updateprofile extends AppCompatActivity {
         firebaseAuth = FirebaseAuth.getInstance();
         firebaseDatabase = FirebaseDatabase.getInstance();
 
-       final DatabaseReference databaseReference = firebaseDatabase.getReference(firebaseAuth.getUid());
+        rootNode = FirebaseDatabase.getInstance();
+        reference  = rootNode.getReference(firebaseAuth.getUid());
 
         reference.addValueEventListener(new ValueEventListener() {
             @Override
@@ -54,6 +58,7 @@ public class updateprofile extends AppCompatActivity {
                 newpassword.setText(userprofile.getUserPassword());
 
 
+
             }
 
             @Override
@@ -63,28 +68,31 @@ public class updateprofile extends AppCompatActivity {
         });
 
 
-      save.setOnClickListener(new View.OnClickListener() {
-          @Override
-          public void onClick(View view) {
-              String username = newUsername.getText().toString();
-              String email = newUsereemail.getText().toString();
-              String address = newUseraddrees.getText().toString();
-              String password=newpassword.getText().toString();
-
-              userprofile Userprofile = new userprofile(username,email,address,password);
-
-              databaseReference.setValue(Userprofile);
-
-              finish();
-
-          }
-      });
         save.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(updateprofile.this,useraccount.class));
+                String name = newUsername.getText().toString();
+                String email = newUsereemail.getText().toString();
+                String address = newUseraddrees.getText().toString();
+                String password=newpassword.getText().toString();
+
+                userprofile Userprofile = new userprofile(name,email,address,password);
+
+               reference.setValue(Userprofile);
+                startActivity(new Intent(updateprofile.this,search.class));
+                finish();
+
             }
         });
+       /* save.setOnClickListener(new View.OnClickListener() {
+          @Override
+           public void onClick(View view) {
+              startActivity(new Intent(updateprofile.this,updateprofile.class));
+        }
+        });
+
+        */
+
 
     }
 }
