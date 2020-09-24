@@ -14,7 +14,7 @@
         android:background="@drawable/input_f"
         android:ems="10"
         android:hint="@string/up_address"
-        android:inputType="textPassword"
+        android:inputType="textPersonName"
         android:textColorHint="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -103,6 +103,7 @@
         android:id="@+id/buttonup"
         android:layout_width="280dp"
         android:layout_height="55sp"
+        android:layout_marginBottom="120dp"
         android:background="@drawable/login_b"
         android:text="@string/up_button"
         android:textAllCaps="false"
@@ -110,6 +111,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/siPassword" />
+        app:layout_constraintTop_toBottomOf="@+id/siPassword1" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
