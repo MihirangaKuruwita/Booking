@@ -142,4 +142,19 @@
         app:layout_constraintVertical_bias="0.06"
         app:srcCompat="@drawable/back" />
 
+    <EditText
+        android:id="@+id/picknote"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-black"
+        android:text="note"
+        android:textSize="18sp"
+        android:textColor="#001DD8"
+        app:layout_constraintBottom_toTopOf="@+id/id7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.549"
+        app:layout_constraintStart_toEndOf="@+id/id5"
+        app:layout_constraintTop_toBottomOf="@+id/id2"
+        app:layout_constraintVertical_bias="0.66" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

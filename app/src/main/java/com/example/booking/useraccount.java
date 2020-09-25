@@ -19,7 +19,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 public class useraccount extends AppCompatActivity {
-    private TextView textView3,name,email,address,password;
+    private TextView textView3,name,email,address,password,deleteu;
     private Button update;
     private FirebaseAuth firebaseAuth;
     private FirebaseDatabase firebaseDatabase;
@@ -45,6 +45,7 @@ public class useraccount extends AppCompatActivity {
         address = findViewById(R.id.siaddress1);
         password = findViewById(R.id.siPassword1);
         update = findViewById(R.id.buttonup1);
+        deleteu = findViewById(R.id.textView2);
 
         firebaseAuth = FirebaseAuth.getInstance();
         firebaseDatabase = FirebaseDatabase.getInstance();
@@ -74,6 +75,8 @@ public class useraccount extends AppCompatActivity {
                 startActivity(new Intent(useraccount.this,updateprofile.class));
             }
         });
+
+     
 
    /*    //show all data
          showAllUserData();
