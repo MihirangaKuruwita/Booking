@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
@@ -19,6 +20,7 @@ public class mybooks extends AppCompatActivity {
     private FirebaseAuth firebaseAuth;
     private EditText bname1,author1,selling1;
     private Button publish;
+    private ImageView delete;
 
     private  FirebaseDatabase firebaseDatabase;
 
@@ -35,6 +37,7 @@ public class mybooks extends AppCompatActivity {
         author1 = findViewById(R.id.author);
         selling1 = findViewById(R.id.selling);
         publish = findViewById(R.id.publish);
+        delete = findViewById(R.id.imageView3);
 
                 //data upload
         firebaseAuth = FirebaseAuth.getInstance();
@@ -63,6 +66,14 @@ public class mybooks extends AppCompatActivity {
                         startActivity(intent);
                     }
                 });
+        delete.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //DatabaseReference databaseReference = firebaseDatabase.getReference(firebaseAuth.getUid());
+                //databaseReference.removeValue();
+                startActivity(new Intent(mybooks.this,search.class));
+            }
+        });
 
             }
 

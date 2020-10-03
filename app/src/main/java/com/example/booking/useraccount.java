@@ -75,6 +75,14 @@ public class useraccount extends AppCompatActivity {
                 startActivity(new Intent(useraccount.this,updateprofile.class));
             }
         });
+        deleteu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                DatabaseReference databaseReference = firebaseDatabase.getReference(firebaseAuth.getUid());
+                databaseReference.removeValue();
+                startActivity(new Intent(useraccount.this,MainActivity.class));
+            }
+        });
 
      
 

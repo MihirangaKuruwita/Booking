@@ -19,8 +19,9 @@ import com.google.firebase.database.ValueEventListener;
 
 public class my_orders extends AppCompatActivity {
 
-    TextView note;
-    private EditText pick;
+    private TextView note,pick;
+
+    //private EditText pick;
 
     private FirebaseAuth firebaseAuth;
     private  FirebaseDatabase firebaseDatabase;
@@ -39,8 +40,7 @@ public class my_orders extends AppCompatActivity {
         pick = findViewById(R.id.picknote);
         note = findViewById(R.id.id6);
 
-
-
+/*
         firebaseAuth = FirebaseAuth.getInstance();
         firebaseDatabase = FirebaseDatabase.getInstance();
 
@@ -54,6 +54,27 @@ public class my_orders extends AppCompatActivity {
                 pick.setText(noteupdate.getNote());
 
 
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+                Toast.makeText(my_orders.this, databaseError.getCode(), Toast.LENGTH_SHORT);
+            }
+        });
+
+ */
+
+
+        firebaseAuth = FirebaseAuth.getInstance();
+        firebaseDatabase = FirebaseDatabase.getInstance();
+
+        DatabaseReference databaseReference = firebaseDatabase.getReference("note");
+
+        databaseReference.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                noteupdate noteupdate = dataSnapshot.getValue(noteupdate.class);
+                pick.setText(noteupdate.getNote());
 
 
             }
@@ -64,6 +85,7 @@ public class my_orders extends AppCompatActivity {
             }
         });
 
+
         note.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -71,6 +93,7 @@ public class my_orders extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
 
 
     }
