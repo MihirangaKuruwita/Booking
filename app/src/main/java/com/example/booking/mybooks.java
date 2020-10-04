@@ -64,6 +64,8 @@ public class mybooks extends AppCompatActivity {
 
                         Intent intent = new Intent(mybooks.this, search.class);
                         startActivity(intent);
+
+                        Toast.makeText(mybooks.this,"Your book added to the store",Toast.LENGTH_SHORT ).show();
                     }
                 });
         delete.setOnClickListener(new View.OnClickListener() {

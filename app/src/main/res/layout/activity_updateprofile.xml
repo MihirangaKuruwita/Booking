@@ -9,21 +9,21 @@
     >
 
     <EditText
-    android:id="@+id/upname1"
-    android:layout_width="310dp"
-    android:layout_height="50sp"
-    android:background="@drawable/input_f"
-    android:ems="10"
-    android:hint="Name"
-    android:inputType="textPersonName"
+        android:id="@+id/upname1"
+        android:layout_width="310dp"
+        android:layout_height="50sp"
+        android:background="@drawable/input_f"
+        android:ems="10"
+        android:hint="Name"
+        android:inputType="textPersonName"
 
-    android:textColorHint="#000000"
-    app:layout_constraintBottom_toBottomOf="parent"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintHorizontal_bias="0.495"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toTopOf="parent"
-    app:layout_constraintVertical_bias="0.458" />
+        android:textColorHint="#000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.43" />
 
     <EditText
         android:id="@+id/upemail1"
@@ -40,7 +40,7 @@
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/upname1"
-        app:layout_constraintVertical_bias="0.075" />
+        app:layout_constraintVertical_bias="0.115" />
 
     <EditText
         android:id="@+id/upPassword1"
@@ -103,7 +103,7 @@
         android:id="@+id/upaddress1"
         android:layout_width="310dp"
         android:layout_height="50sp"
-        android:layout_marginBottom="200dp"
+        android:layout_marginTop="16dp"
         android:background="@drawable/input_f"
         android:ems="10"
         android:hint="Address"
@@ -113,7 +113,7 @@
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/upemail1"
-        app:layout_constraintVertical_bias="0.844" />
+        app:layout_constraintVertical_bias="0.09" />
 
     <ImageView
         android:id="@+id/imageView40"
@@ -121,8 +121,10 @@
         android:layout_height="99dp"
         app:layout_constraintBottom_toTopOf="@+id/upname1"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView240"
+        app:layout_constraintVertical_bias="0.313"
         app:srcCompat="@drawable/pro" />
 
     <TextView

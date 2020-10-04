@@ -12,7 +12,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif-black"
-        android:text="Cancel Order"
+        android:text="Delete note"
         android:textColor="#001DD8"
         android:textColorHint="#000000"
         android:textSize="14sp"
@@ -39,12 +39,12 @@
         app:layout_constraintTop_toBottomOf="@+id/id4"
         app:layout_constraintVertical_bias="0.296" />
 
-    <TextView
+    <EditText
         android:id="@+id/id5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif-black"
-        android:text="Submitted"
+        android:hint="Submitted"
         android:textColor="#D31111"
         android:textColorHint="#D31111"
         android:textSize="18sp"
@@ -65,40 +65,41 @@
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.14"
+        app:layout_constraintHorizontal_bias="0.114"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/id3"
-        app:layout_constraintVertical_bias="0.105" />
+        app:layout_constraintVertical_bias="0.133" />
 
-    <TextView
+    <EditText
         android:id="@+id/id3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif-black"
-        android:text="Total : RS 500.00"
+        android:hint="Total :"
         android:textColorHint="#000000"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.18"
+        app:layout_constraintHorizontal_bias="0.138"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/id"
-        app:layout_constraintVertical_bias="0.075" />
+        app:layout_constraintVertical_bias="0.054" />
 
-    <TextView
+    <EditText
         android:id="@+id/id2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="87dp"
         android:fontFamily="sans-serif-black"
-        android:text="Order Id : 10001 Date : 10/9/2020"
+        android:hint="Order Id :"
         android:textColorHint="#000000"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.352"
+        app:layout_constraintHorizontal_bias="0.134"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/id2"
-        app:layout_constraintVertical_bias="0.308" />
+        app:layout_constraintTop_toBottomOf="@+id/myorder4"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/myorder4"
@@ -120,15 +121,15 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif-black"
-        android:text="Harry Potter\n Rs 500.00"
+        android:hint="book name"
         android:textColorHint="#000000"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.16"
+        app:layout_constraintHorizontal_bias="0.136"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/id2"
-        app:layout_constraintVertical_bias="0.083" />
+        app:layout_constraintVertical_bias="0.068" />
 
     <ImageView
         android:id="@+id/imageView"
@@ -144,16 +145,17 @@
 
     <EditText
         android:id="@+id/picknote"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="186dp"
+        android:layout_height="70dp"
         android:fontFamily="sans-serif-black"
-        android:textSize="18sp"
+        android:hint="note"
         android:textColor="#001DD8"
+        android:textSize="18sp"
         app:layout_constraintBottom_toTopOf="@+id/id7"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.549"
+        app:layout_constraintHorizontal_bias="0.625"
         app:layout_constraintStart_toEndOf="@+id/id5"
         app:layout_constraintTop_toBottomOf="@+id/id2"
-        app:layout_constraintVertical_bias="0.66" />
+        app:layout_constraintVertical_bias="0.69" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

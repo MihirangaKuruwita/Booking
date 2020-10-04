@@ -81,7 +81,7 @@ public class updateprofile extends AppCompatActivity {
                reference.setValue(Userprofile);
                 startActivity(new Intent(updateprofile.this,search.class));
                 finish();
-
+                Toast.makeText(updateprofile.this,"Profile updated",Toast.LENGTH_SHORT ).show();
             }
         });
        /* save.setOnClickListener(new View.OnClickListener() {

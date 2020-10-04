@@ -57,6 +57,7 @@ public class signup extends AppCompatActivity {
                 }
                 Intent intent = new Intent(signup.this, search.class);
                 startActivity(intent);
+                Toast.makeText(signup.this,"Your account created ",Toast.LENGTH_SHORT ).show();
             }
         });
 

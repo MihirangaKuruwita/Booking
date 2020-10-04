@@ -71,7 +71,7 @@
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/siaddress1"
-        app:layout_constraintVertical_bias="0.145" />
+        app:layout_constraintVertical_bias="0.142" />
 
     <TextView
         android:id="@+id/textView24"
@@ -146,17 +146,17 @@
         android:id="@+id/siaddress1"
         android:layout_width="310dp"
         android:layout_height="50sp"
-        android:layout_marginBottom="200dp"
+        android:layout_marginTop="8dp"
         android:background="@drawable/input_f"
         android:ems="10"
         android:hint="Address"
         android:textColorHint="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintHorizontal_bias="0.534"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/siemail1"
-        app:layout_constraintVertical_bias="0.844" />
+        app:layout_constraintVertical_bias="0.05" />
 
     <ImageView
         android:id="@+id/imageView4"
