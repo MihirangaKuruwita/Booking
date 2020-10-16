@@ -83,12 +83,7 @@ public class mybooks extends AppCompatActivity {
 
 
 
- /*   private void setupViews(){
-        bname1=(EditText)findViewById(R.id.bname);
-        author1=(EditText)findViewById(R.id.author);
-        selling1= (EditText)findViewById(R.id.selling);
-        }
-*/
+
 
 
 

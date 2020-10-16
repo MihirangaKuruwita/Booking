@@ -41,13 +41,13 @@ public class my_orders extends AppCompatActivity {
         del = findViewById(R.id.id7);
 
 
-/*
+
         firebaseAuth = FirebaseAuth.getInstance();
         firebaseDatabase = FirebaseDatabase.getInstance();
 
         DatabaseReference databaseReference = firebaseDatabase.getReference("note");
 
-        databaseReference.addValueEventListener(new ValueEventListener() {
+      /*  databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 noteupdate noteupdate = dataSnapshot.getValue(noteupdate.class);
@@ -62,9 +62,11 @@ public class my_orders extends AppCompatActivity {
             }
         });
 
+       */
 
 
- */
+
+
 
 
         note.setOnClickListener(new View.OnClickListener() {
@@ -77,8 +79,8 @@ public class my_orders extends AppCompatActivity {
         del.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //DatabaseReference databaseReference = firebaseDatabase.getReference("note");
-               // databaseReference.removeValue();
+                DatabaseReference databaseReference = firebaseDatabase.getReference("note");
+                databaseReference.removeValue();
                 Intent intent = new Intent(my_orders.this,my_orders.class);
                 startActivity(intent);
                 Toast.makeText(my_orders.this,"Delete note",Toast.LENGTH_SHORT ).show();

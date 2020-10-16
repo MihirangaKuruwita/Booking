@@ -84,14 +84,7 @@ public class updateprofile extends AppCompatActivity {
                 Toast.makeText(updateprofile.this,"Profile updated",Toast.LENGTH_SHORT ).show();
             }
         });
-       /* save.setOnClickListener(new View.OnClickListener() {
-          @Override
-           public void onClick(View view) {
-              startActivity(new Intent(updateprofile.this,updateprofile.class));
-        }
-        });
 
-        */
 
 
     }

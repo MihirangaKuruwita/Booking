@@ -28,9 +28,9 @@ public class signin extends AppCompatActivity {
      private EditText si_email;
      private EditText si_password;
      private FirebaseAuth firebaseAuth;
-    private FirebaseDatabase firebaseDatabase;
-    private TextView name,email,address,password;
-    private Button update;
+   // private FirebaseDatabase firebaseDatabase;
+   // private TextView name,email,address,password;
+    //private Button update;
 
      //DatabaseReference reference;
      //FirebaseDatabase rootNode;
@@ -50,11 +50,6 @@ public class signin extends AppCompatActivity {
         firebaseAuth = firebaseAuth.getInstance();
 
         FirebaseUser user = firebaseAuth.getCurrentUser();
-
-        //if(user != null){
-        //finish();
-        // startActivity(new Intent(signin.this, search.class ));
-        // }
 
         login.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -90,88 +85,10 @@ public class signin extends AppCompatActivity {
 
 
 
- /*               name = findViewById(R.id.siname1);
-                    email = findViewById(R.id.siemail1);
-                    address = findViewById(R.id.siaddress1);
-                    password = findViewById(R.id.siPassword1);
-                    update = findViewById(R.id.buttonup1);
-
-                    firebaseAuth = FirebaseAuth.getInstance();
-                    firebaseDatabase = FirebaseDatabase.getInstance();
-
-                    DatabaseReference databaseReference = firebaseDatabase.getReference(firebaseAuth.getUid());
-
-                    databaseReference.addValueEventListener(new ValueEventListener() {
-                        @Override
-                        public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                            userprofile userprofile = dataSnapshot.getValue(userprofile.class);
-                            name.setText(userprofile.getUsername());
-                            email.setText(userprofile.getUserEmail());
-                            address.setText(userprofile.getUserAddress());
-                            password.setText(userprofile.getUserPassword());
-
-
-                        }
-
-                        @Override
-                        public void onCancelled(@NonNull DatabaseError databaseError) {
-                            Toast.makeText(signin.this, databaseError.getCode(), Toast.LENGTH_SHORT);
-                        }
-                    });
-                }
 
 
 
 
 
 
-
-  private  void isUser(){
-        final String userEnteredEmail = si_email.getText().toString().trim();
-        final String userEnteredPassword = si_password.getText().toString().trim();
-
-        DatabaseReference reference = FirebaseDatabase.getInstance().getReference(firebaseAuth.getUid());
-
-       Query checkUser = reference.orderByChild("email").equalTo(userEnteredEmail);
-
-       checkUser.addListenerForSingleValueEvent(new ValueEventListener() {
-           @Override
-           public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-               if(dataSnapshot.exists()){
-
-                   String PasswordFromDB =dataSnapshot.child(userEnteredPassword).child("password").getValue(String.class);
-
-                   if(PasswordFromDB.equals(userEnteredPassword)){
-                       String nameFromDB =dataSnapshot.child(userEnteredEmail).child("username").getValue(String.class);
-                       String emailFromDB =dataSnapshot.child(userEnteredEmail).child("email").getValue(String.class);
-                       String addressFromDB =dataSnapshot.child(userEnteredEmail).child("address").getValue(String.class);
-                       //String PasswordFromDB =dataSnapshot.child(userEnteredEmail).child("password").getValue(String.class);
-
-                       Intent intent = new Intent(getApplicationContext(),useraccount.class);
-
-                       intent.putExtra("username",nameFromDB);
-                       intent.putExtra("email",emailFromDB);
-                       intent.putExtra("address",addressFromDB);
-                       intent.putExtra("password",PasswordFromDB);
-
-                       startActivity(intent);
-
-                   }
-                   else {
-                       si_password.setError("Wrong Password");
-                       si_password.requestFocus();
-                   }
-               }
-               else {
-                   si_email.setError("No such email exist");
-                   si_email.requestFocus();
-               }
-           }
-
-           @Override
-           public void onCancelled(@NonNull DatabaseError databaseError) {
-
-           }
-       });
-*/
     }
